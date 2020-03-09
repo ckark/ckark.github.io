@@ -123,7 +123,7 @@ label.normal:nth-of-type(odd) {
 
 input[type=text] {
   height: calc(5.6 * var(--spacing-unit));
-  min-width: calc(10 * var(--spacing-pct));
+  width: calc(48 * var(--spacing-unit));
   font-size: calc(1.8 * var(--font-size));
   color: var(--quaternary-color);
   border: none;
@@ -255,6 +255,7 @@ footer {
   }
 
   input[type="text"] {
+    min-width: none;
     width: calc(10 * var(--spacing-pct));
     font-size: calc(1.4 * var(--font-size));
   }
