@@ -25,7 +25,8 @@ const getSubtotal = (a, b, c, d, e) => {
             style: 'currency',
             currency: 'USD'
         });
-    })
+    });
+    if (c.textContent === "$NaN") c.textContent = '$0.00';
 };
 
 getSubtotal('m12', 'm15', 'smsub', 12, 15);
