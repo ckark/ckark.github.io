@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80    
+RewriteCond %{HTTP_HOST} ^ckark\.github\.io$ [OR] 
+RewriteCond %{HTTP_HOST} ^www\.ckark\.github\.io$ 
+RewriteRule ^(.*)$ https://www.ckark.github.io/$1 [R,L] 
+RewriteRule ^subfolder$ "http\:\/\/ckark\.github\.io\/" [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
