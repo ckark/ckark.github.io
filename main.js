@@ -8,25 +8,25 @@ Array.from(document.getElementsByClassName('rate')).forEach(e => e.addEventListe
     if (Number(this.value) > 12) this.value = '12';
 }))
 
-document.getElementById('total').textContent = "$0.00";
 const getSubtotal = (a, b, c, d, e) => {
     a = document.getElementById(a);
     b = document.getElementById(b);
     c = document.getElementById(c);
-    c.textContent = '$0.00'
+    c.textContent = '$0.00';
     a.addEventListener('input', function () {
         c.textContent = ((a.value * d) + (b.value * e)).toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD'
         });
+        if (c.textContent === "$NaN") c.textContent = '$0.00';
     })
     b.addEventListener('input', function () {
         c.textContent = ((a.value * d) + (b.value * e)).toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD'
         });
+        if (c.textContent === "$NaN") c.textContent = '$0.00';
     });
-    if (c.textContent === "$NaN") c.textContent = '$0.00';
 };
 
 getSubtotal('m12', 'm15', 'smsub', 12, 15);
@@ -35,6 +35,7 @@ getSubtotal('w12', 'w15', 'wsub', 12, 15);
 getSubtotal('th12', 'th15', 'thsub', 12, 15);
 getSubtotal('f12', 'f15', 'fsub', 12, 15);
 
+document.getElementById('total').textContent = "$0.00";
 
 document.addEventListener('change', e => {
     const r = (a, b) => a + b;
@@ -43,7 +44,9 @@ document.addEventListener('change', e => {
         style: 'currency',
         currency: 'USD'
     });
+    if (document.getElementById('total').textContent === "$NaN") document.getElementById('total').textContent = '$0.00';
 })
+
 // Shake Erroneous Field Values on Blur
 const validate = e => {
     Array.from(document.getElementsByClassName(e)).forEach(el => {
@@ -60,4 +63,4 @@ const validate = e => {
         });
     });
 };
-validate('nameOrTitle')
+validate('rate')
