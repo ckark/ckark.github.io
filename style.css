@@ -56,9 +56,11 @@ body {
 }
 
 section {
+  width: calc(10 * var(--spacing-pct));
   grid-area: main;
   display: grid;
   justify-content: center;
+  margin: calc(1.6 * var(--spacing-unit));
 }
 
 * {
@@ -121,9 +123,7 @@ label.normal:nth-of-type(odd) {
 
 input[type=text] {
   height: calc(5.6 * var(--spacing-unit));
-  width: calc(48 * var(--spacing-unit));
-  max-width: calc(48 * var(--spacing-unit));
-  min-width: calc(32.7 * var(--spacing-unit));
+  min-width: calc(10 * var(--spacing-pct));
   font-size: calc(1.8 * var(--font-size));
   color: var(--quaternary-color);
   border: none;
@@ -249,9 +249,13 @@ footer {
 }
 
 @media screen and (max-width:767px) {
+  section {
+    width: calc(9 * var(--spacing-pct));
+    margin: calc(1.6 * var(--spacing-unit));
+  }
 
   input[type="text"] {
-    width: calc(32.7 * var(--spacing-unit));
+    width: calc(10 * var(--spacing-pct));
     font-size: calc(1.4 * var(--font-size));
   }
 }
