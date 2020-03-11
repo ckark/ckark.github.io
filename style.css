@@ -249,6 +249,10 @@ footer {
 }
 
 @media screen and (max-width:767px) {
+  h5 {
+    text-align: center;
+  }
+
   section {
     width: calc(9 * var(--spacing-pct));
     margin: calc(1.6 * var(--spacing-unit));
