@@ -34,6 +34,7 @@
 
 html {
   font-family: -apple-system,
+    'SF Pro Text',
     BlinkMacSystemFont,
     'Inter',
     'Segoe UI',
@@ -48,6 +49,7 @@ html {
 @supports (font-variation-settings: normal) {
   html {
     font-family: -apple-system,
+      'SF Pro Text',
       BlinkMacSystemFont,
       'Inter',
       'Segoe UI',
@@ -82,7 +84,17 @@ section {
 }
 
 * {
-  font-family: system-ui, 'Inter', sans-serif;
+  font-family: -apple-system,
+    'SF Pro Text',
+    BlinkMacSystemFont,
+    'Inter',
+    'Segoe UI',
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol;
   box-sizing: border-box;
   color: var(--quaternary-color);
 }
