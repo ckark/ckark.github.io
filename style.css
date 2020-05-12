@@ -14,7 +14,6 @@
   --fade-32: rgba(0, 0, 0, 0.32);
   --faded-white: rgba(255, 255, 255, 0.38);
   --font-size: 10px;
-  --font-weight: 100;
   --spacing-unit: 10px;
   --spacing-pct: 10%;
   -webkit-text-size-adjust: 10px;
@@ -30,36 +29,37 @@
   height: auto
 }
 
-@import url('https://rsms.me/inter/inter.css');
+@import url("//hello.myfonts.net/count/3b8a76");
 
-html {
-  font-family: -apple-system,
-    'SF Pro Text',
-    BlinkMacSystemFont,
-    'Inter',
-    'Segoe UI',
-    Helvetica,
-    Arial,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol;
+@font-face {
+  font-family: 'HelveticaNeueLTPro-Blk';
+  src: url('HelveticaNeueLTPro-Blk/font.woff2') format('woff2'), url('HelveticaNeueLTPro-Blk/font.woff') format('woff')
 }
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: -apple-system,
-      'SF Pro Text',
-      BlinkMacSystemFont,
-      'Inter',
-      'Segoe UI',
-      Helvetica,
-      Arial,
-      sans-serif,
-      Apple Color Emoji,
-      Segoe UI Emoji,
-      Segoe UI Symbol;
-  }
+@font-face {
+  font-family: 'HelveticaNeueLTPro-Bd';
+  src: url('HelveticaNeueLTPro-Bd/font.woff2') format('woff2'), url('HelveticaNeueLTPro-Bd/font.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTPro-Roman';
+  src: url('HelveticaNeueLTPro-Roman/font.woff2') format('woff2'), url('HelveticaNeueLTPro-Roman/font.woff') format('woff')
+}
+
+.HelveticaNeueLTPro-Roman {
+  font-family: HelveticaNeueLTPro-Roman
+}
+
+.HelveticaNeueLTPro-Bd {
+  font-family: HelveticaNeueLTPro-Bd
+}
+
+.HelveticaNeueLTPro-Hv {
+  font-family: HelveticaNeueLTPro-Hv
+}
+
+.HelveticaNeueLTPro-Blk {
+  font-family: HelveticaNeueLTPro-Blk
 }
 
 html {
@@ -67,12 +67,12 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   margin: 0;
-  display: grid;
-  justify-content: center;
   user-select: none;
+}
+
+body>* {
+  font-family: HelveticaNeueLTPro-Roman, sans-serif;
 }
 
 section {
@@ -84,40 +84,29 @@ section {
 }
 
 * {
-  font-family: -apple-system,
-    'SF Pro Text',
-    BlinkMacSystemFont,
-    'Inter',
-    'Segoe UI',
-    Helvetica,
-    Arial,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol;
   box-sizing: border-box;
   color: var(--quaternary-color);
 }
 
 h3 {
-  font-weight: calc(8 * var(--font-weight));
+  font-family: HelveticaNeueLTPro-Blk;
   font-size: calc(4.8 * var(--font-size));
   margin: calc(0.8 * var(--spacing-unit)) 0;
 }
 
-
 h5 {
-  font-weight: calc(7 * var(--font-weight));
+  font-family: HelveticaNeueLTPro-Hv;
   font-size: calc(3.2 * var(--font-size));
   margin: calc(0.8 * var(--spacing-unit)) 0;
 }
 
-h5:last-of-type {
-  font-weight: calc(8 * var(--font-weight));
+.stat>h6 {
+  font-family: HelveticaNeueLTPro-Blk;
+  margin: calc(1.6 * var(--spacing-unit))
 }
 
 h6 {
-  font-weight: calc(7 * var(--font-weight));
+  font-family: HelveticaNeueLTPro-Hv;
   font-size: calc(2.4 * var(--font-size));
   margin: calc(2.4 * var(--spacing-unit)) 0;
 }
@@ -129,19 +118,13 @@ hr {
   margin: calc(3.2 * var(--spacing-unit)) 0;
 }
 
-hr:last-of-type {
-  border: none;
-  margin-bottom: calc(8 * var(--spacing-unit));
-}
-
 p {
   font-size: calc(1.8 * var(--font-size));
 }
 
-
 label.normal {
   font-size: calc(1.4 * var(--font-size));
-  font-weight: calc(8 * var(--font-weight));
+  font-family: HelveticaNeueLTPro-Blk;
   text-transform: uppercase;
   letter-spacing: calc(0.075 * var(--spacing-pct));
   margin: 32px 0 8px 0;
@@ -171,20 +154,21 @@ input[type=text]:focus {
 }
 
 footer {
-  position: fixed;
   display: grid;
   justify-content: center;
   align-content: center;
-  left: 0;
-  bottom: 0;
   width: calc(10 * var(--spacing-pct));
 }
 
 .stat {
-  max-width: 80vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  max-width: calc(51.2 * var(--spacing-unit));
+  width: calc(48 * var(--spacing-unit));
   background: var(--tertiary-color);
   filter: drop-shadow(0 -8px 16px rgba(0, 0, 0, .24));
-  padding: calc(2.4 * var(--spacing-unit)) calc(4.8 * var(--spacing-unit));
+  padding: calc(1.6 * var(--spacing-unit)) calc(3.2 * var(--spacing-unit));
   border-radius: calc(8 * var(--spacing-unit)) calc(8 * var(--spacing-unit)) 0 0;
 }
 
