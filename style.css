@@ -110,6 +110,9 @@ h6 {
   font-size: calc(2.4 * var(--font-size));
   margin: calc(2.4 * var(--spacing-unit)) 0;
 }
+h6:nth-of-type(5){
+  margin-bottom: calc(10.4 * var(--spacing-unit))
+}
 
 hr {
   border: calc(0.10 * var(--spacing-unit)) solid var(--secondary-color);
