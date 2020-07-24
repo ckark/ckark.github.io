@@ -89,7 +89,7 @@ section {
 }
 
 h3 {
-  font-family: HelveticaNeueLTPro-Blk;
+  font-family: HelveticaNeueLTPro-Hv;
   font-size: calc(4.8 * var(--font-size));
   margin: calc(0.8 * var(--spacing-unit)) 0;
 }
@@ -101,7 +101,7 @@ h5 {
 }
 
 .stat>h6 {
-  font-family: HelveticaNeueLTPro-Blk;
+  font-family: HelveticaNeueLTPro-Hv;
   margin: calc(1.6 * var(--spacing-unit))
 }
 
@@ -154,7 +154,12 @@ input[type=text]:focus {
 }
 
 footer {
-  display: grid;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; 
   justify-content: center;
   align-content: center;
   width: calc(10 * var(--spacing-pct));
