@@ -1,76 +1,200 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
-    <meta content="telephone=no" name="format-detection">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <head>
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="telephone=no" name="format-detection" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/nannyCalc/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/nannyCalc/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/nannyCalc/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/nannyCalc/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/nannyCalc/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/nannyCalc/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/nannyCalc/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/nannyCalc/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/nannyCalc/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/nannyCalc/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/nannyCalc/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/nannyCalc/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/nannyCalc/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/nannyCalc/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <title>nannyCalc</title>
-    <meta content="website" name="og:type">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="/style.css" as="style">
-</head>
+    <meta content="website" name="og:type" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="/style.css" as="style" />
+  </head>
 
-<body>
+  <body>
     <section>
-        <h3>Nanny Calc 🧮 👶</h3>
-        <h5>Sunday and/or Monday</h5><label class="normal">$12 Rate</label> <input type="text" class="rate" id="m12"
-            maxlength="5" placeholder="Enter the number of hours worked at the $12 rate."> <label class="normal">$15
-            Rate</label> <input type="text" class="rate" id="m15" maxlength="5"
-            placeholder="Enter the number of hours worked at the $15 rate.">
-        <h6>Subtotal: <span id="smsub"></span></h6>
-        <hr>
-        <h5>Tuesday</h5><label class="normal">$12 Rate</label> <input type="text" class="rate" id="t12" maxlength="5"
-            placeholder="Enter the number of hours worked at the $12 rate."> <label class="normal">$15 Rate</label>
-        <input type="text" class="rate" id="t15" maxlength="5"
-            placeholder="Enter the number of hours worked at the $15 rate.">
-        <h6>Subtotal: <span id="tsub"></span></h6>
-        <hr>
-        <h5>Wednesday</h5><label class="normal">$12 Rate</label> <input type="text" class="rate" id="w12" maxlength="5"
-            placeholder="Enter the number of hours worked at the $12 rate."> <label class="normal">$15 Rate</label>
-        <input type="text" class="rate" id="w15" maxlength="5"
-            placeholder="Enter the number of hours worked at the $15 rate.">
-        <h6>Subtotal: <span id="wsub"></span></h6>
-        <hr>
-        <h5>Thursday</h5><label class="normal">$12 Rate</label> <input type="text" class="rate" id="th12" maxlength="5"
-            placeholder="Enter the number of hours worked at the $12 rate."> <label class="normal">$15 Rate</label>
-        <input type="text" class="rate" id="th15" maxlength="5"
-            placeholder="Enter the number of hours worked at the $15 rate.">
-        <h6>Subtotal: <span id="thsub"></span></h6>
-        <hr>
-        <h5>Friday</h5><label class="normal">$12 Rate</label> <input type="text" class="rate" id="f12" maxlength="5"
-            placeholder="Enter the number of hours worked at the $12 rate."> <label class="normal">$15 Rate</label>
-        <input type="text" class="rate" id="f15" maxlength="5"
-            placeholder="Enter the number of hours worked at the $15 rate.">
-        <h6>Subtotal: <span id="fsub"></span></h6>
+      <h3>Nanny Calc 🧮 👶</h3>
+      <h5>Sunday and/or Monday</h5>
+      <label class="normal">$12 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="m12"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $12 rate."
+      />
+      <label class="normal">$15 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="m15"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $15 rate."
+      />
+      <h6>Subtotal: <span id="smsub"></span></h6>
+      <hr />
+      <h5>Tuesday</h5>
+      <label class="normal">$12 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="t12"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $12 rate."
+      />
+      <label class="normal">$15 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="t15"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $15 rate."
+      />
+      <h6>Subtotal: <span id="tsub"></span></h6>
+      <hr />
+      <h5>Wednesday</h5>
+      <label class="normal">$12 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="w12"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $12 rate."
+      />
+      <label class="normal">$15 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="w15"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $15 rate."
+      />
+      <h6>Subtotal: <span id="wsub"></span></h6>
+      <hr />
+      <h5>Thursday</h5>
+      <label class="normal">$12 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="th12"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $12 rate."
+      />
+      <label class="normal">$15 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="th15"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $15 rate."
+      />
+      <h6>Subtotal: <span id="thsub"></span></h6>
+      <hr />
+      <h5>Friday</h5>
+      <label class="normal">$12 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="f12"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $12 rate."
+      />
+      <label class="normal">$15 Rate</label>
+      <input
+        type="text"
+        class="rate"
+        id="f15"
+        maxlength="5"
+        placeholder="Enter the number of hours worked at the $15 rate."
+      />
+      <h6>Subtotal: <span id="fsub"></span></h6>
     </section>
     <footer>
-        <div class="stat">
-            <h6>Weekly Total: <span id="total"></span></h6>
-        </div>
-
+      <div class="stat">
+        <h6>Weekly Total: <span id="total"></span></h6>
+      </div>
     </footer>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
